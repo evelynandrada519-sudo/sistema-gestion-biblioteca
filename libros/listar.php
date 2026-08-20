@@ -1,0 +1,71 @@
+<?php
+
+require_once "../conexion.php";
+
+$sql = "SELECT * FROM libros";
+$resultado = $conexion->query($sql);
+
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Libros</title>
+</head>
+
+<body>
+
+    <h1>📚 Listado de Libros</h1>
+
+    <a href="agregar.php">➕ Agregar libro</a>
+
+    <br><br>
+
+    <table border="1">
+
+        <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Editorial</th>
+            <th>Año</th>
+            <th>Acciones</th>
+        </tr>
+
+        <?php while ($libro = $resultado->fetch_assoc()) { ?>
+
+            <tr>
+
+                <td><?php echo $libro["id"]; ?></td>
+
+                <td><?php echo $libro["titulo"]; ?></td>
+
+                <td><?php echo $libro["autor"]; ?></td>
+
+                <td><?php echo $libro["editorial"]; ?></td>
+
+                <td><?php echo $libro["año"]; ?></td>
+
+                <td>
+                    <a href="modificar.php?id=<?php echo $libro["id"]; ?>">
+                        ✏️ Modificar
+                    </a>
+
+                    |
+
+                    <a href="eliminar.php?id=<?php echo $libro["id"]; ?>">
+                        🗑️ Eliminar
+                    </a>
+                </td>
+
+            </tr>
+
+        <?php } ?>
+
+    </table>
+
+</body>
+
+</html>
