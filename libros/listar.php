@@ -12,14 +12,15 @@ $resultado = $conexion->query($sql);
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../estilo.css">
     <title>Listado de Libros</title>
 </head>
 
 <body>
 
-    <h1>📚 Listado de Libros</h1>
+    <h1>Listado de Libros</h1>
 
-    <a href="agregar.php">➕ Agregar libro</a>
+    <a href="agregar.php">Agregar libro</a>
 
     <br><br>
 
@@ -50,13 +51,13 @@ $resultado = $conexion->query($sql);
 
                 <td>
                     <a href="modificar.php?id=<?php echo $libro["id"]; ?>">
-                        ✏️ Modificar
+                        Modificar
                     </a>
 
                     |
 
                     <a href="eliminar.php?id=<?php echo $libro["id"]; ?>">
-                        🗑️ Eliminar
+                        Eliminar
                     </a>
                 </td>
 
@@ -66,6 +67,7 @@ $resultado = $conexion->query($sql);
 
     </table>
 
+    <a href="../index.php">Volver</a>
 </body>
 
 </html>

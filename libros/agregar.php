@@ -10,6 +10,7 @@ ini_set('display_errors', 1);
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../estilo.css">
     <title>Agregar Libro</title>
 </head>
 
@@ -45,7 +46,7 @@ ini_set('display_errors', 1);
 
     <br>
 
-    <a href="listar.php">⬅️ Volver al listado</a>
+    <a href="listar.php">Atras</a>
 
 </body>
 

@@ -33,6 +33,7 @@ $resultado = $conexion->query($sql);
     <h1>Listado de Prestamos</h1>
 
     <a href="agregar.php">Agregar prestamo</a>
+    <a href="vigentes.php">Prestamos vigentes</a>
 
     <br><br>
 
@@ -129,5 +130,5 @@ $resultado = $conexion->query($sql);
     </table>
 
 </body>
-
+    <a href="../index.php">Volver</a>
 </html>

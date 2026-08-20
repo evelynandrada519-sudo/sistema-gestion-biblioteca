@@ -67,7 +67,7 @@ $resultado = $conexion->query($sql);
         <?php } ?>
 
     </table>
-
+<a href="../index.php">Volver</a>
 </body>
 
 </html>

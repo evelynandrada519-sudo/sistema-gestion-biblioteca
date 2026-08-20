@@ -71,7 +71,7 @@ $libro = $resultado->fetch_assoc();
 
     <br>
 
-    <a href="listar.php">⬅️ Volver al listado</a>
+    <a href="listar.php">Volver</a>
 
 </body>
 
